@@ -1,0 +1,44 @@
+#!/bin/sh
+
+if [[ -f $HOME/Documents/sync/.aspell.en.prepl ]] && [[ ! -L $HOME/.aspell.en.prepl ]]; then
+   echo "Linking aspell prepl made"
+   ln -s $HOME/Documents/sync/.aspell.en.prepl $HOME/.aspell.en.prepl
+else
+   echo "Linking aspell prepl NOT made"
+fi
+
+if [[ -f $HOME/Documents/sync/.aspell.en.pws ]] && [[ ! -L $HOME/.aspell.en.pws ]]; then
+   echo "Linking aspell pws made"
+   ln -s $HOME/Documents/sync/.aspell.en.pws $HOME/.aspell.en.pws
+else
+   echo "Linking aspell pws NOT made"
+fi
+
+if [[ -d $HOME/Code/emacs/github/ianweatherhogg/emacsd ]] && [[ ! -L $HOME/.emacs.d ]]; then
+   echo "Linking emacsd made"
+   ln -s $HOME/Code/emacs/github/ianweatherhogg/emacsd $HOME/.emacs.d
+else
+   echo "Linking emacsd NOT made"
+fi
+
+if [[ -d $HOME/Documents/sync/.password-store ]] && [[ ! -L $HOME/.password-store ]]; then
+   echo "Linking password store made"
+   ln -s $HOME/Documents/sync/.password-store $HOME/.password-store
+else
+   echo "Linking password store NOT made"
+fi
+
+if [[ -d /data/Library ]] && [[ ! -L $HOME/Documents/library ]]; then
+   echo "Linking Documents Library made"
+   ln -s /data/Library $HOME/Documents/library
+else
+   echo "Linking Documents Library NOT made"
+fi
+
+if [[ -d /data/Pictures ]] && [[ ! -L $HOME/Documents/pictures ]]; then
+   echo "Linking Documents Pictures made"
+   ln -s /data/Pictures $HOME/Documents/pictures
+else
+   echo "Linking Documents Pictures NOT made"
+fi
+
