@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync --checksum -ave ssh /home/ian/Documents/sync/ ian:Documents/sync/

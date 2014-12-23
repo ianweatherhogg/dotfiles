@@ -1,0 +1,47 @@
+#
+# ~/.bash_aliases
+#
+alias pureshell='nix-shell -p haskellPackages.purescript nodePackages.bower nodePackages.grunt-cli git'
+alias httpdump='sudo tcpdump -i wlan0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
+alias ec='emacsclient -n'
+alias doian='ssh-add ~/.ssh/id_rsa_laptop'
+# alias gpg=gpg2
+alias po='systemctl poweroff'
+alias sus='systemctl suspend'
+alias hib='sudo systemctl hibernate'
+alias bbc='ping -c 5 bbc.co.uk'
+alias hubscala='cd ~/Code/scala/github'
+alias hubclojure='cd ~/Code/clojure/github'
+alias hubvim='cd ~/Code/vim/github'
+alias hubemacs='cd ~/Code/emacs/github'
+alias hubhaskell='cd ~/Code/haskell/github'
+alias hubocaml='cd ~/Code/ocaml/github'
+alias hubcabal='cd ~/Code/haskell/cabal'
+alias hubc='cd ~/Code/c/github'
+alias hublisp='cd ~/Code/lisp/github'
+alias hubgo='cd ~/Code/go/github'
+alias hubbash='cd ~/Code/bash/github'
+alias hubcpp='cd ~/Code/cpp/github'
+alias hubfont='cd ~/Code/font/github'
+alias hubcss='cd ~/Code/css/github'
+alias hubnix='cd ~/Code/nix/github'
+alias hubhtml='cd ~/Code/html/github'
+alias hubjava='cd ~/Code/java/github'
+alias hublatex='cd ~/Code/latex/github'
+alias hubrust='cd ~/Code/rust/github'
+alias hubdart='cd ~/Code/dart/github'
+alias hubobjectivec='cd ~/Code/objectivec/github'
+alias hubjavascript='cd ~/Code/javascript/github'
+alias hubpython='cd ~/Code/python/github'
+alias hubruby='cd ~/Code/ruby/github'
+alias huberlang='cd ~/Code/erlang/github'
+# alias hdoc='chromium /home/ian/.cabal/share/doc/index.html'
+# alias hdocghc='chromium /usr/share/doc/ghc/html/libraries/index.html'
+
+alias Temp='cd ~/Temp' # cd to directories should be camalcase
+
+alias lsort='ls -asl --sort=time'
+# alias node='NODE_NO_READLINE=1 rlwrap node'
+# alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
+# alias pdf='evince $1'
+alias doctech='cd ~/Documents/library/technical'
