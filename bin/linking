@@ -42,3 +42,9 @@ else
    echo "Linking Documents Pictures NOT made"
 fi
 
+if [[ -d /data/Videos ]] && [[ ! -L $HOME/Videos ]]; then
+   echo "Linking Videos made"
+   ln -s /data/Videos $HOME/Videos
+else
+   echo "Linking Videos NOT made"
+fi
