@@ -1,45 +1,52 @@
 #!/bin/sh
 
-if [[ -f $HOME/Documents/sync/.aspell.en.prepl ]] && [[ ! -L $HOME/.aspell.en.prepl ]]; then
-   echo "Linking aspell prepl made"
-   ln -s $HOME/Documents/sync/.aspell.en.prepl $HOME/.aspell.en.prepl
+if [[ -f /common/Documents ]] && [[ ! -L $HOME/Documents ]]; then
+   echo "Linking Documents made"
+   ln -s /common/Documents $HOME/Documents
+else
+   echo "Linking Documents NOT made"
+fi
+
+if [[ -f /common/Documents/sync/.aspell.en.prepl ]] && [[ ! -L $HOME/.aspell.en.prepl ]]; then
+   echo "Linking aspell prepl  made"
+   ln -s /common/Documents/sync/.aspell.en.prepl $HOME/.aspell.en.prepl
 else
    echo "Linking aspell prepl NOT made"
 fi
 
-if [[ -f $HOME/Documents/sync/.aspell.en.pws ]] && [[ ! -L $HOME/.aspell.en.pws ]]; then
-   echo "Linking aspell pws made"
-   ln -s $HOME/Documents/sync/.aspell.en.pws $HOME/.aspell.en.pws
+if [[ -f /common/Documents/sync/.aspell.en.pws ]] && [[ ! -L $HOME/.aspell.en.pws ]]; then
+   echo "Linking aspell pws  made"
+   ln -s /common/Documents/sync/.aspell.en.pws $HOME/.aspell.en.pws
 else
    echo "Linking aspell pws NOT made"
 fi
 
-if [[ -d $HOME/Code/emacs/github/ianweatherhogg/emacsd ]] && [[ ! -L $HOME/.emacs.d ]]; then
+if [[ -d /common/Code/emacs/github/ianweatherhogg/emacsd ]] && [[ ! -L $HOME/.emacs.d ]]; then
    echo "Linking emacsd made"
-   ln -s $HOME/Code/emacs/github/ianweatherhogg/emacsd $HOME/.emacs.d
+   ln -s /common/Code/emacs/github/ianweatherhogg/emacsd $HOME/.emacs.d
 else
    echo "Linking emacsd NOT made"
 fi
 
-if [[ -d $HOME/Documents/sync/.password-store ]] && [[ ! -L $HOME/.password-store ]]; then
+if [[ -d  /common/Documents/sync/.password-store ]] && [[ ! -L $HOME/.password-store ]]; then
    echo "Linking password store made"
-   ln -s $HOME/Documents/sync/.password-store $HOME/.password-store
+   ln -s /common/Documents/sync/.password-store $HOME/.password-store
 else
    echo "Linking password store NOT made"
 fi
 
-if [[ -d /data/Library ]] && [[ ! -L $HOME/Documents/library ]]; then
-   echo "Linking Documents Library made"
-   ln -s /data/Library $HOME/Documents/library
+if [[ -d /data/Library ]] && [[ ! -L $HOME/Library ]]; then
+   echo "Linking Library made"
+   ln -s /data/Library $HOME/Library
 else
-   echo "Linking Documents Library NOT made"
+   echo "Linking Library NOT made"
 fi
 
-if [[ -d /data/Pictures ]] && [[ ! -L $HOME/Documents/pictures ]]; then
-   echo "Linking Documents Pictures made"
-   ln -s /data/Pictures $HOME/Documents/pictures
+if [[ -d /data/Pictures ]] && [[ ! -L $HOME/Pictures ]]; then
+   echo "Linking Pictures made"
+   ln -s /data/Pictures $HOME/Pictures
 else
-   echo "Linking Documents Pictures NOT made"
+   echo "Linking Pictures NOT made"
 fi
 
 if [[ -d /data/Videos ]] && [[ ! -L $HOME/Videos ]]; then
